@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎访问登录页面</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html,body /*标签选择器*/
+        {
+            height: 100%;
+
+        }
+        #container
+        {
+            background-image: url("images/backgroundImg.jpg");
+            background-size: cover;
+            background-repeat: round;
+            height: 100%;
+            display: flex; /*使用flex布局*/
+            flex-direction: row;  /* 子元素水平依次排列，主轴方向为水平方向 */
+            justify-content: center; /* 主轴方向，即当前的水平方向居中对齐 */
+            align-items: center; /* 交叉轴方向，即当前的垂直方向居中对齐 */
+        }
+        #loginwrapper
+        {
+            height: 470px;
+            width: 850px;
+            background-image: url("images/loginBG.jpg");
+            background-size: cover;
+            background-repeat: round;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id = "container">
+    <div id="loginwrapper">
+        <div id="loginwindow">
+            <div id="logininfo">
+                <h1>系统账户登录</h1>
+                <label>账户名称</label>
+                <input id="username"
+                       name = "username"
+                       type="text"
+                />
+                <label>输入密码</label>
+                <input id="password"
+                       name="password"
+                       type="password"
+                />
+                <button id="btn" name="btn">登录</button>
+                <a href="#">立即注册</a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
