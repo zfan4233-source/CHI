@@ -1,9 +1,156 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
+    <meta charset="UTF-8">
+    <title>欢迎访问登录页面</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html,body /*标签选择器*/
+        {
+            height: 100%;
 
+        }
+        #container
+        {
+            background-image: url("images/backgroundImg.jpg");
+            background-size: cover;
+            background-repeat: round;
+            height: 100%;
+            display: flex; /*使用flex布局*/
+            flex-direction: row;  /* 子元素水平依次排列，主轴方向为水平方向 */
+            justify-content: center; /* 主轴方向，即当前的水平方向居中对齐 */
+            align-items: center; /* 交叉轴方向，即当前的垂直方向居中对齐 */
+        }
+        #loginwrapper
+        {
+            height: 470px;
+            width: 850px;
+            min-width: 850px;
+            background-image: url("images/loginBG.jpg");
+            background-size: cover;
+            background-repeat: round;
+            border-radius: 10px;
+            display: flex;
+            flex-direction:row-reverse;
+        }
+        #loginwindow
+        {
+            background-color: white;
+            height: 100%;
+            width: 45%;
+            border-radius:10px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #logininfo
+        {
+            width: 80%;
+            height: 70%;
+            color: #6c6c6c;
+            font-size: 16px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        /* 配置div#logininfo下的直接孩子h1样式,直接孩子用>表示   */
+        #logininfo > h1 {
+            text-align: center; /*文本中对齐*/
+            color: #547BD6; /*字体颜色*/
+            margin-bottom: 20px;
+        }
+
+        /* 配置div#logininfo下的所有孩子input样式,所有孩子用空格表示   */
+        #logininfo input {
+            border-bottom: 1px solid #547BD6; /*设置下边框样式*/
+            width: 100%; /*宽度占满父容器的所有宽度*/
+            letter-spacing: 1px; /*水平字间距1px*/
+            margin-top: 4px; /*设置上边距margin为4px*/
+        }
+
+        /* 配置div#btn_wrapper下的直接孩子button样式*/
+        #btn_wrapper > button {
+            height: 40px; /*设置高度为40px*/
+            width: 150px; /*设置宽度为15px*/
+            background-color: #547BD6; /*配置button按钮背景色*/
+            border-radius: 20px; /*配置四角为圆角，度为20px*/
+            letter-spacing: 5px; /*设置字间距为5px*/
+            font-size: 20px; /*设置字体大小为20px */
+            color: #ffffff; /* 设置字体颜色为白色 */
+            box-shadow: 0px 15px 25px -5px #000; /* 设置按钮阴影 */
+        }
+
+        /* 配置div#btn_wrapper下的直接孩子button中对齐*/
+        #btn_wrapper {
+            text-align: center; /*让当前容器中的内容中对齐*/
+        }
+
+        /* 配置div#btn_wrapper下的直接孩子a中对齐*/
+        #a_wrapper {
+            text-align: center; /*让当前容器中的内容中对齐*/
+            margin-top: -15px; /*配置上方边距*/
+        }
+
+        /*配置超链接的样式*/
+        /*a:link：连接的平时状态，a:visited被点击过的链接状态，a:active处于被激活的链接状态*/
+        a:link, a:visited, a:active {
+            color: #547BD6; /*配置链接颜色*/
+            text-decoration: none; /*配置无任何装饰效果*/
+        }
+
+        /*配置鼠标放到链接上的样式*/
+        a:hover {
+            color: red; /*配置颜色为红色*/
+            text-decoration: underline;  /*配置装饰效果为下划线*/
+        }
+    </style>
 </head>
 <body>
-<h1>hello word!!!</h1>
-<p>this is a html page</p>
+
+<div id = "container">
+    <form  method="get" action="user/login">
+    <div id="loginwrapper">
+        <div id="loginwindow">
+            <div id="logininfo">
+                <h1>系统账户登录</h1>
+                <div id="username_wrapper">
+                <label>账户名称</label>
+                    </br>
+                <input id="username"
+                       name = "username"
+                       type="text"
+                       placeholder="请输入用户名"
+                />
+                </div>
+
+                <div id="password_wrapper">
+
+                <label>输入密码</label>
+                    </br>
+                <input id="password"
+                       name="password"
+                       type="password"
+                       placeholder="请输入密码"
+                />
+                </div>
+
+                <div id="btn_wrapper">
+                <button id="btn" name="btn">登录</button>
+                </div>
+
+                <div id="a_wrapper">
+                <a href="#">立即注册</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </form>
+</div>
+
 </body>
 </html>
